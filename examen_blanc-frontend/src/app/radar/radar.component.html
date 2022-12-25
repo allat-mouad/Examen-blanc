@@ -1,0 +1,20 @@
+
+  <div class="container">
+    <table class="uk-table uk-table-striped" *ngIf="radars">
+      <thead>
+      <tr>
+        <th>ID</th> <th>Vitesse Max</th> <th>Latitude</th><th>Longitude</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let c of radars._embedded.radars">
+        <td>{{c.id}}</td>
+        <td>{{c.vitesseMax}}</td>
+        <td>{{c.Latitude}}</td>
+        <td>
+          <a class="btn btn-primary">Modifier</a>
+          <a  class="btn btn-danger">Supprimer</a>        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
